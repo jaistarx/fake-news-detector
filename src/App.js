@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
@@ -32,7 +31,7 @@ function App() {
       <header className="header">Fake News Report</header>
       <div className="flexing">
         <div>
-          <img src="images/online_articles.svg" className="image1"></img>
+          <img src="images/online_articles.svg" className="image1" alt=""></img>
         </div>
         <div className="heading">
           <h1>We bring to you what is right and wrong</h1>
@@ -53,40 +52,40 @@ function App() {
         <p1>
           Relevant By Spread<input type="checkbox"></input>
         </p1>
-        <img src="images/fav.svg"></img>
+        <img src="images/fav.svg" alt=""></img>
         <button>Report</button>
       </div>
       {r.map((n) => (
         <div className="news">
           <div className="flexing2">
             <div className="subnews">
-              <a href="" style={{textDecoration:"none", color:"black"}}>
+              <a href="/" style={{textDecoration:"none", color:"black"}} alt="">
                 <h1>{n.content}</h1>
               </a>
               <span>{n.date}</span>
             </div>
             <div className="icons">
-              <img src="images/source.svg"></img>
+              <img src="images/source.svg" alt=""></img>
               <div>Source</div>
             </div>
             <div className="icons">
-              <img src="images/reason.svg"></img>
+              <img src="images/reason.svg" alt=""></img>
               <div>Reason</div>
             </div>
             <div className="icons">
-              <img src="images/vector.svg"></img>
+              <img src="images/vector.svg" alt=""></img>
               <div>{n.comment}</div>
             </div>
             <div className="icons">
-              <img src="images/thumbsup.svg" style={{ width: "90%" }}></img>
+              <img src="images/thumbsup.svg" style={{ width: "90%" }} alt=""></img>
               <div>{n.like}</div>
             </div>
             <div className="icons">
-              <img src="images/thumbsdown.svg" style={{ width: "90%" }}></img>
+              <img src="images/thumbsdown.svg" style={{ width: "90%" }} alt=""></img>
               <div>{n.dislike}</div>
             </div>
             <div className="icons">
-              <img src="images/next.png"></img>
+              <img src="images/next.png" alt=""></img>
             </div>
           </div>
         </div>
