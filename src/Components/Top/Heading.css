@@ -1,0 +1,31 @@
+.image1 {
+    width:92%;
+    margin-left: 4%;
+  }
+  
+.heading {
+    font-size: 150%;
+    /* padding-top: 5rem; */
+    margin-left: 3rem;
+    margin-right: 6rem;
+  }
+  .heading h1 {
+    text-align: center;
+  }
+  
+@media screen and (max-width: 55rem){
+    .heading{
+      font-size: 1rem;
+      margin-left: 4%;
+      margin-right: 4%;
+    }
+    .heading p1{
+        font-size: 0.8rem;
+    }
+    .bn{
+        margin-top: 2%;
+        margin-left: 25%;
+        margin-right: 25%;
+        width: 50%;
+    }
+  }
