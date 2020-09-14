@@ -8,6 +8,8 @@ function App() {
   const [fd,setFd]=useState([]);
   const [fu,setFu]=useState([]);
   const [fo,setFo]=useState([]);
+  const [fdesc,setFdesc]=useState([]);
+  const [foriginal,setForiginal]=useState([]);
   useEffect(() => {
     fetch("/time")
       .then((res) => res.json())
@@ -20,14 +22,16 @@ function App() {
         setFu(Object.values(ob.url));
         setFd(Object.values(ob.date));
         setFo(Object.values(op));
-        console.log(ob);
+        setForiginal(Object.values(op));
+        setFdesc(Object.values(ob.desc));
+        console.log(ob.desc);
       });
   }, []);
   return (
     <div className="App">
       <Header />
       <Headings />
-      <News ft={ft} fu={fu} fd={fd} fo={fo}/>
+      <News ft={ft} fu={fu} fd={fd} fo={fo} fdesc={fdesc} foriginal={foriginal}/>
     </div>
   );
 }

@@ -1,3 +1,6 @@
+/* .bi{
+  background-image: url("images/bg_heading.svg");
+} */
 .image1 {
     width:92%;
     margin-left: 4%;
@@ -12,7 +15,15 @@
   .heading h1 {
     text-align: center;
   }
-  
+  .mb{
+   margin-bottom: 8%;
+  }
+  .quote{
+    font-family: 'Fugaz One', cursive;
+    color: rgb(76, 129, 69);
+    margin-top: 2%;
+    text-align: center;
+  }
 @media screen and (max-width: 55rem){
     .heading{
       font-size: 1rem;

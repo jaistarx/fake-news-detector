@@ -100,14 +100,14 @@ es = EarlyStopping(monitor = 'val_loss', patience = 5, verbose = 2)
 train_history = model.fit(x = x_train,
                          y = y_train_data,
                          validation_split = 0.2,
-                         epochs = 20,
+                         epochs = 8,
                          batch_size = 100,
                          verbose = 1,
                          callbacks = [es])
 
 import json
 import requests
-url = 'https://newsapi.org/v2/top-headlines?language=en&apiKey=f1fc1540925b40bd9bdc1aead5e83072'
+url = 'https://newsapi.org/v2/top-headlines?language=en&apiKey=f1fc1540925b40bd9bdc1aead5e83072&pageSize=100'
 response = requests.get(url)
 news = json.loads(response.text)
 news=json.dumps(news["articles"], indent=4)
@@ -125,6 +125,7 @@ finale = datat['title']
 finale=pd.DataFrame(finale)
 finale.insert(1,"url",datat['url'],True)
 finale.insert(1,"date",datat['publishedAt'],True)
+finale.insert(1,"desc",datat['description'],True)
 
 token.fit_on_texts(tt)
 
@@ -140,7 +141,7 @@ mn = pd.DataFrame(m)
 finale=pd.DataFrame(finale)
 finale.insert(1,"OP",mn,True)
 
-finale.drop(finale[finale.OP<0.8].index, inplace=True)
+finale.drop(finale[finale.OP<0.87].index, inplace=True)
 
 finale.to_csv('finale.csv')
 
