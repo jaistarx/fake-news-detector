@@ -1,120 +1,153 @@
-
 .flexing3 {
-    display: flex;
-    /* justify-content: ; */
+  display: flex;
+  /* justify-content: ; */
+}
+.flexing2 {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.news {
+  width: 85%;
+  margin-left: 8%;
+  margin-right: 1%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 10px;
+  box-shadow: 5px 5px grey;
+}
+.mainflexing {
+  display: flex;
+}
 
-  }
-  .flexing2 {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 3%;
-    padding-right: 3%;
-  }
-  .news {
-    width:85%;
-    margin-left: 8%;
-    margin-right: 1%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border: 1px solid rgb(224, 224, 224);
-    border-radius: 10px;
-    box-shadow: 5px 5px grey;
-    
-  }
-  .mainflexing{
-      display: flex;
-  }
-
-  .sb{
-      width:30%;
-      border-radius: 10px;
-      outline: none;
-  }
-  .icons {
-    text-align: center;
-    /* padding-top: 10%;
+.sb {
+  width: 30%;
+  border-radius: 10px;
+  outline: none;
+}
+.icons {
+  text-align: center;
+  /* padding-top: 10%;
     padding-bottom:10%;
     padding-left: 10%; */
-    
-  }
-  .subnews {
-    width: 45%;
-    padding-bottom: 2%;
-    font-size: .8rem;
-    padding-top: 2.4%;
-  }
-  .bns{
-      margin-bottom: 2%;
-       margin-left: 2%;
-    width: 20%;      }
-  /* .thumb{
+}
+.subnews {
+  width: 45%;
+  padding-bottom: 2%;
+  font-size: 0.8rem;
+  padding-top: 2.4%;
+}
+.bns {
+  margin-bottom: 2%;
+  margin-left: 2%;
+  width: 20%;
+}
+/* .thumb{
       width:80%;
   } */
-  .mainicons{
-    width: 7% ;
-    margin-left: 1%;
-    margin-right: 5%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border: 1px solid rgb(224, 224, 224);
-    border-radius: 10px;
-    box-shadow: 5px 5px grey;
+.mainicons {
+  width: 7%;
+  margin-left: 1%;
+  margin-right: 5%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 10px;
+  box-shadow: 5px 5px grey;
+}
+.subicons {
+  display: flex;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  justify-content: space-around;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.subnews-media-descrip {
+  width: 50%;
+  padding-top: 3%;
+}
+.mainflexing-media {
+  display: none;
+}
+@media screen and (max-width: 55rem) {
+  .mainicons {
+    display: none;
   }
-  .subicons{
-      display: flex;
-      padding-top: 20%;
-      padding-bottom: 20%;
-      justify-content: space-around;
-      padding-left: 10%;
-      padding-right: 10%;
+  .sb {
+    width: 80%;
+    margin-left: 6%;
+    margin-right: 6%;
   }
-  @media screen and (max-width: 55rem){
-      .sb{
-          width:80%;
-          margin-left: 6%;
-          margin-right: 6%;
-      }
-      .flexing p{
-          font-size: 0.8rem;
-          width:80%;
-          margin-left: 6%;
-          margin-right: 6%;
-      }
-      .flexing2{
-          flex-direction: column;
-      }
-      .subnews{
-          width:75%;
-          padding: 10%;
-      }
-      .subnews h1{
-          font-size: 1.1rem;
-      }
-      .ic{
-          width:50%;
-      }
-      .ic2{
-        width:70%;
-    }
-    
-      .news{
-          padding-right: 4%;
-      }
-      .bns{
-          width:80%;
-          margin-left: 10%;
-          margin-right: 10%;
-          margin-bottom: 3%;
-      }
-      .txts{
-          font-size: 0.6rem;
-      }
+  .flexing p {
+    font-size: 0.8rem;
+    width: 80%;
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+  .flexing2 {
+    flex-direction: column;
+  }
+  .subnews {
+    width: 100%;
+  }
+  .subnews h1 {
+    font-size: 1.1rem;
+  }
+  .ic {
+    width: 50%;
+  }
+  .ic2 {
+    width: 70%;
   }
 
-  @media screen and (max-width: 45rem){
-    .ic{
-        width:40%;}
-    .ic2{
-        width:70%;
-    }
+  .news {
+    margin-right: 7%;
+    width: 100%;
   }
+  .bns {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 3%;
+  }
+  .txts {
+    font-size: 0.6rem;
+  }
+  .subnews-media-descrip {
+    width: 100%;
+    padding: 0%;
+  }
+  .subnews-media-descrip p {
+    margin-top: 0%;
+  }
+  .mainflexing-media {
+    display: flex;
+    justify-content: space-between;
+    padding: 0%;
+    margin: 0%;
+  }
+  .subicons-media {
+    margin: 0%;
+    margin-bottom: -10%;
+    padding-top: 3%;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-bottom: 0%;
+    text-align: center;
+  }
+  .subicons-media p {
+    font-size: 150%;
+  }
+}
+
+@media screen and (max-width: 45rem) {
+  .ic {
+    width: 40%;
+  }
+  .ic2 {
+    width: 70%;
+  }
+}

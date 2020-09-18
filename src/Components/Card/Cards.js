@@ -8,8 +8,8 @@ export default function News(props) {
   const [check, setCheck] = useState(0);
   const [original, setOriginal] = useState(4);
   // const [checked,setChecked]=useState(true);
-  const [checked1,setChecked1]=useState(true);
-  const [checked2,setChecked2]=useState(false);
+  const [checked1, setChecked1] = useState(true);
+  const [checked2, setChecked2] = useState(false);
   // console.log(props.fo);
   var c = props.fo.length;
   var b = [];
@@ -59,16 +59,15 @@ export default function News(props) {
     }
     return toSort;
   }
-  const checking=()=>{
-    if(checked1===true){
+  const checking = () => {
+    if (checked1 === true) {
       setChecked1(false);
       setChecked2(true);
-    }
-    else{
+    } else {
       setChecked1(true);
       setChecked2(false);
     }
-  }
+  };
   var d;
   var k = [];
   return (
@@ -79,8 +78,6 @@ export default function News(props) {
           Relevant By Date
           <input
             type="checkbox"
-           
-
             onClick={clicking}
             onChange={checking}
             checked={checked1}
@@ -118,8 +115,63 @@ export default function News(props) {
                       </a>
                       <span>{String(props.fd[d]).slice(0, 10)}</span>
                     </div>
-                    <div style={{ width: "50%", paddingTop: "3%" }}>
+                    <div className="subnews-media-descrip">
                       <p>{String(props.fdesc[d]).slice(0, 300)}</p>
+                    </div>
+                    <div className="mainflexing-media">
+                      <div className="subicons-media">
+                        <IconContext.Provider
+                          value={{ color: "green", size: "25%" }}
+                        >
+                          <a href={props.fu[d]}>
+                            <BsNewspaper className="ic" />
+                          </a>
+                        </IconContext.Provider>
+                        <div className="txts">
+                          <a
+                            href={props.fu[d]}
+                            style={{ textDecoration: "none", color: "black" }}
+                          >
+                            <p>Source</p>
+                          </a>
+                        </div>
+                      </div>
+                      <div className="subicons-media">
+                        <IconContext.Provider
+                          value={{ color: "green", size: "25%" }}
+                        >
+                          <FaQuestion className="ic" />
+                        </IconContext.Provider>
+                        <div className="txts">
+                          <p>{parseInt(100 * n)}%</p>
+                        </div>
+                      </div>
+                      <div className="subicons-media">
+                        <IconContext.Provider
+                          value={{ color: "green", size: "25%" }}
+                        >
+                          <a
+                            href={
+                              "https://www.linkedin.com/sharing/share-offsite/?url=" +
+                              props.fu[d]
+                            }
+                            style={{ textDecoration: "none", color: "black" }}
+                          >
+                            <FaLinkedinIn className="ic" />
+                          </a>
+                        </IconContext.Provider>
+                        <div className="txts">
+                          <a
+                            href={
+                              "https://www.linkedin.com/sharing/share-offsite/?url=" +
+                              props.fu[d]
+                            }
+                            style={{ textDecoration: "none", color: "black" }}
+                          >
+                            <p>Share</p>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
