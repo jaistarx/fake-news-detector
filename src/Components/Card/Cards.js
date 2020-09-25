@@ -93,7 +93,7 @@ export default function News(props) {
           ></input>
         </p>
 
-        <button>Report</button>
+        <a href="https://pgportal.gov.in/"><button style={{marginTop:"15%"}}>Report</button></a>
       </div>
       {
         // console.log(sortedArr),

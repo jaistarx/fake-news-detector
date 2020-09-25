@@ -1,13 +1,14 @@
 import time
+import os
 from flask import Flask
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../build', static_url_path='/')
 
 
 import numpy as np
 import pandas as pd
 
-data = pd.read_csv('C:\\Users\\JaiStarX\\Downloads\\data.csv')
+data = pd.read_csv('data.csv')
 data = data.sample(frac = 1)
 
 data['Length'] = [len(headline) for headline in data['Headline']]
@@ -49,8 +50,8 @@ y_train_data = train_data['Label']
 x_test_data = test_data['Headline'].fillna('')
 y_test_data = test_data['Label']
 
-from keras.preprocessing import sequence
-from keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing import sequence
+from tensorflow.keras.preprocessing.text import Tokenizer
 
 detail = data['Length'].describe()
 
@@ -71,12 +72,12 @@ x_test_seq = token.texts_to_sequences(x_test_data)
 x_train = sequence.pad_sequences(x_train_seq, maxlen = data_length)
 x_test = sequence.pad_sequences(x_test_seq, maxlen = data_length)
 
-from keras.models import Sequential
-from keras.layers.core import Dense, Dropout, Activation
-from keras.layers.embeddings import Embedding
-from keras.layers.recurrent import LSTM
-from keras.layers import Bidirectional, TimeDistributed
-from keras.callbacks import EarlyStopping
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout, Activation
+from tensorflow.keras.layers import Embedding
+from tensorflow.keras.layers import LSTM
+from tensorflow.keras.layers import Bidirectional, TimeDistributed
+from tensorflow.keras.callbacks import EarlyStopping
 
 model = Sequential()
 model.add(Embedding(output_dim = output_length, 
@@ -148,6 +149,13 @@ finale.to_csv('finale.csv')
 # finale.to_json(path_or_buf='finale.json',orient='records')
 finale=finale.to_json()
 
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
+
 @app.route('/time')
 def get_current_time():
     return {"finale":[finale]}
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 80))
