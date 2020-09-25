@@ -1,4 +1,4 @@
-absl-py @ file:///D:/bld/absl-py_1598382479526/work
+
 astor @ file:///home/conda/feedstock_root/build_artifacts/astor_1593610464257/work
 astunparse==1.6.3
 cachetools==4.1.1
