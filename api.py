@@ -1,4 +1,3 @@
-import time
 import os
 from flask import Flask
 from tensorflow.keras.models import load_model
