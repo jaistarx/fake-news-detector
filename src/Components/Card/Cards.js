@@ -72,8 +72,8 @@ export default function News(props) {
   var k = [];
   return (
     <div>
-      <div className="flexing" style={{ padding: "2.5rem" }}>
-        <input placeholder="Search" className="sb"></input>
+      <div className="flexing fx" style={{ padding: "2.5rem" }}>
+        {/* <input placeholder="Search" className="sb"></input> */}
         <p>
           Relevant By Date
           <input
@@ -93,7 +93,7 @@ export default function News(props) {
           ></input>
         </p>
 
-        <a href="https://pgportal.gov.in/"><button style={{marginTop:"15%"}}>Report</button></a>
+        <a href="https://pgportal.gov.in/"><button className="rebutton">Report</button></a>
       </div>
       {
         // console.log(sortedArr),
