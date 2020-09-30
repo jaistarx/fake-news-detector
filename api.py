@@ -5,7 +5,6 @@ import numpy as np
 import pandas as pd
 app = Flask(__name__, static_folder='./build', static_url_path='/')
 
-
 model=load_model(os.path.join(os.path.abspath(os.path.dirname(__file__)),"fnd.h5"))
 
 import json
