@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Components/Header/Headertext";
 import Headings from "./Components/Top/Headings";
 import News from "./Components/Card/Cards";
+// import axios from 'axios';
 function App() {
   const [ft,setFt]=useState([]);
   const [fd,setFd]=useState([]);
@@ -11,7 +12,9 @@ function App() {
   const [fdesc,setFdesc]=useState([]);
   const [foriginal,setForiginal]=useState([]);
   useEffect(() => {
-    fetch("/time")
+    const proxyurl="https://cors-anywhere.herokuapp.com/";
+    const url="https://fakend.herokuapp.com/time";
+    fetch(proxyurl+url,{headers:{'Access-Control-Allow-Origin':true}})
       .then((res) => res.json())
       .then((dir1) => {
         var ob=dir1.finale[0];
