@@ -15,7 +15,7 @@ export default function Headings() {
           <img src="images/online_articles.svg" className="image1" alt=""></img>
         </div>
         <div className="heading">
-          <h1>We bring to you what is right and wrong</h1>
+          <h1>Fake News Detection Using Stance Detection</h1>
           <p>
             Tagline here as a short description for the user to easily under
             stand abt the company
